@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt</title>
+    <style>
+        .receipt-container{
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .body{
+            text-align: center;
+            background-color: #4287B8;
+            margin-top: 20px;
+            color:#ffffff;
+        }
+        .img1 {
+            text-align: center;
+            background-color:white;
+            font-size: 20px;
+            margin-top: 20px;
+            color:#4287B8;
+        }
+       
+        .receipt-detail{
+            display: flex;
+            justify-content: center;
+            margin: 20px 0px;
+            flex-direction: column;
+            padding-top: 20px;
+        }
+        .receipt-detail-key{
+            color: grey;
+            width: 30%;
+           
+        }
+        .receipt-detail-value{
+            font-weight: bold;
+            color: black;
+            border-bottom: dashed gray;
+            width: 100%;
+        }
+        .Accountant-Signature{
+            text-align: right;
+            margin: 100px;
+            margin-right: 10px;
+            color: black;
+        }
+        #stmp{
+            width: 150px;
+            position:absolute;
+            right: 0;
+            bottom: -20px;
+            margin-right: 360px;
+            bottom: -120px;
+            transform: rotate(-20deg);
+        }
+        .receipt{
+            border-top: dashed gray;
+            padding-top: 10px;
+            color: black;
+        }
+        .receipt-footer{
+            background-color:#98C678;
+            color: black;
+        }
+          /* Small Devices */
+  
+  @media screen and  (max-width: 600px) {
+    .receipt-detail {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+    }
+
+    .stmp{
+        width: 20px;
+    }
+}
+          /* Normal Devices */
+  
+  @media screen and (min-width: 601px) and (max-width: 768px) {
+    .receipt-detail {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+    }
+
+    .stmp{
+        width: 50px;
+    }
+}
+
+/*  Tablet Devices */
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .receipt-detail {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width:993px) and (max-width: 1200px) {
+    .receipt-detail {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+/* Desktop device */
+
+@media screen and  (max-width: 1200px) {
+    .receipt-detail {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+}
+    </style>
+</head>
+<body>
+    <div class="receipt-container">
+      <div class="img1"><img src="logo.jpg" style="width:40%;"><hr/>
+         <h1 class="body">Hospital Bill Receipt</h1>
+            <div class="receipt-detail">
+            <div class="receipt-detail-key">Receipt No:</div>
+            <div class="receipt-detail-value">f23401</div>
+            <div class="receipt-detail-key">Amount:</div>
+            <div class="receipt-detail-value">50,000/-</div>
+            <div class="receipt-detail-key">Payment Date:</div>
+            <div class="receipt-detail-value">14 Feb 2024</div>
+            <div class="receipt-detail-key">Payment Mode:</div>
+            <div class="receipt-detail-value">UPI</div>
+            <div class="receipt-detail-key">Patient Name:</div>
+            <div class="receipt-detail-value">Diksha Bhagwat</div>
+            <div class="receipt-detail-key">Doctor:</div>
+            <div class="receipt-detail-value">Dr. Aditi Mungse</div>
+            <img src="download.jpeg"style="max-width:150px;height:150px;"id="stmp"><br/><br/><br/><br/><br/>
+            <p class="Accountant-Signature">Accountant Signature</p>
+            <p class="receipt">This is a computer generated receipt and does not require any signature </p>
+            <div class="receipt-footer">
+                <p >Thank you for your Payment.And stay healthy</p>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
